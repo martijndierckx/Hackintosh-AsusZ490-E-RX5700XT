@@ -28,42 +28,12 @@ You can find my EFI folder in this repository.
 - [x] **2.5Gbit Ethernet (Intel I225-V)**
 - [x] **Brightness control over Displayport**: Using 2 mediakey tweaks in Opencore and this nice [NativeDisplayBrightness](https://github.com/Bensge/NativeDisplayBrightness) tool.
 - [x] **GUI picker with custom icons**
-- [x] **Sleep/Wake**
+- [x] **Sleep/Wake** 
 - [x] **Shutdown**
 - [x] **Restart**
 
 # Not working so far
 - [ ] **iGPU UHD630 Compute**: I can get my IGPU to show up when enabling IGPU multimonitor in the BIOS, but I'm not able to do any benchmarks on it. Geekbench doesn't allow to select the IGPU, so something is wrong. Hints are appreciated :-).
-
-# Details
-
-If you get an error within the installation saying something like "this installation is damaged" you can try this workaround: 
- Delete Installinfo.plist on the installer disk:
-  - Open the "Install macOS Catalina" Disk
-  - Right Click on the package "Install macOS Catalina"
-  - Click on "Package Contents"
-  - Then navigate to Contents > SharedSupport
-  - Delete the Installlnfo.plist
-
-
-## Post Istall
-
-Once you have installed MacOS Catalina onto your hackintosh's drive you should repeat the same steps above of installing the EFI folder onto it's EFI-partition:
-
-  - (Don't have two EFI partitions mounted at the same time since it can confuse things)
-  - Mount the EFI-partition of your hackintosh's drive (ie of the drive you installed Catalina onto)
-  - Replace the entire contents of this EFI-partition with the your specialized entire EFI folder (which includes your own unique serial numbers)
-
-Now your hackintosh can boot without the USB install stick.
-
-Then following the other sections below you might want to investigate a GUI boot menu, a boot chime, and other post install niceties. (See [dortania post install cosmetics](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#opencore-beauty-treatment))
-
-## Fixing Sleep/Wake 
-
-In this section I want to show you how I setup my system so it sleeps and wakes just fine, but I don't tell you that you need exactly these settings to have a proper configuration.
-
-I also had to use ```SSDT-Disable-CNVW.aml``` to disable the CNVi feature of the m.2 slot, where the onboard Intel Wifi 6 sits, because the CNVi device was constantly waking up my PC.
-
 
 # Credits
 Thanks for your support :) Your help was crucial for my build.
