@@ -6,7 +6,7 @@ I have successfully installed MacOS Catalina 10.15.7 on a ASUS Z490-E.
 
 You can find my EFI folder in this repository.
 
-**Current Bootloader: OpenCore 0.6.2**
+**Current Bootloader: OpenCore 0.6.3**
 
 # Hardware
 - Intel i9-10900k
